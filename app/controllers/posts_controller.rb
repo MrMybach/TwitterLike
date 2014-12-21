@@ -16,7 +16,7 @@ class PostsController < ApplicationController
       flash[:success] = "Post was successfuly created!"
       redirect_to @post
     else
-      flash[:notice] = "Something went wrong. Please try again!"
+      flash[:alert] = "Something went wrong. Please try again!"
       render :new
     end
   end
