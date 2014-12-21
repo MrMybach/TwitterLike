@@ -7,11 +7,22 @@ class PostsController < ApplicationController
   end
 
   def new
-    @post = current_user.posts.new
+    @post = Post.new
   end
 
   def create
-    @post = current_user.posts.new(post_params)
+    @post = Post.new(post_params)
+    if @post.save
+      flash[:success] = "Post was successfuly created!"
+      redirect_to @post
+    else
+      flash[:notice] = "Something went wrong. Please try again!"
+      render :new
+    end
+  end
+
+  def show
+    @post = Post.find(params[:id])
   end
 
   private

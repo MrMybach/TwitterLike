@@ -1,1 +1,11 @@
 <h1>Add new tweet</h1>
+
+<%= form_for @post, url: {action: "create"} do |f| %>
+	<section>
+		<%= f.text_field :title, placeholder: "Type in Title" %>
+	</section>
+	<section>
+		<%= f.text_area :text, placeholder: "Type in your message", size: "30x4" %>
+	</section>
+	<%= f.submit "Create" %> 
+<% end %>
