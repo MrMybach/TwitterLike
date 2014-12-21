@@ -3,11 +3,19 @@
 </div>
 
 <div class="row">
-	<% @posts.each do |post| %>
-		<div class="post col-md-4">
-			<h2><%= link_to "#{post.title}", post_path(post) %></h2>
-			<small> <%= post.created_at.strftime("%d %b %Y") %></small>
-			<p><%= post.text %></p>
-		</div>
-	<% end %>
+	<div class="col-md-6 col-md-offset-2">
+		<% @posts.each do |post| %>
+			<div class="post">
+				<h2><%= post.title %></h2>
+				<small> <%= post.created_at.strftime("%d %b %Y") %></small>
+				<p><%= post.text %></p>	
+				<div class="btn-group btn-group-xs" role="group">
+					<%= link_to "Edit", edit_post_path(post), class: "btn btn-default" %>
+					<%= link_to "Delete", post_path(post), method: :delete, class: "btn btn-default" %>
+				</div>
+			</div>
+			<hr>
+		<% end %>
+		<%= paginate @posts %>
+	</div>
 </div>

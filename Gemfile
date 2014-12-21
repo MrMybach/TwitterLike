@@ -39,6 +39,7 @@ gem 'autoprefixer-rails'
 # gem 'debugger', group: [:development, :test]
 
 gem 'devise', '~> 3.4.1'
+gem 'kaminari'
 
 group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
