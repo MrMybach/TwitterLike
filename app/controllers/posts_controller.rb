@@ -1,17 +1,17 @@
 class PostsController < ApplicationController
 
-  before_action :authenticate_user!, except: [:index]
+  before_action :authenticate_user!
 
   def index
     @posts = Post.all
   end
 
   def new
-    @post = Post.new
+    @post = current_user.posts.new
   end
 
   def create
-    @post = Post.new(post_params)
+    @post = current_user.posts.new(post_params)
     if @post.save
       flash[:success] = "Post was successfuly created!"
       redirect_to @post
@@ -23,6 +23,18 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
+  end
+
+  def edit
+
+  end
+
+  def update
+
+  end
+
+  def destroy
+
   end
 
   private
