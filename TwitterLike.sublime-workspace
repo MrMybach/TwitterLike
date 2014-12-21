@@ -1,0 +1,696 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"prio",
+				"priority_class"
+			],
+			[
+				"padd",
+				"padding-top"
+			],
+			[
+				"bug",
+				"bug_params"
+			],
+			[
+				"bu",
+				"bug_params"
+			],
+			[
+				"bugs",
+				"bugs_path"
+			],
+			[
+				"in",
+				"index"
+			],
+			[
+				"des",
+				"description"
+			],
+			[
+				"btn",
+				"btn-danger"
+			],
+			[
+				"fin",
+				"find"
+			],
+			[
+				"margi",
+				"margin-left"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"fon",
+				"font-family"
+			],
+			[
+				"e",
+				"end	end (ERB)"
+			],
+			[
+				"ro",
+				"root"
+			],
+			[
+				"fir",
+				"first_name"
+			],
+			[
+				"se",
+				"second_name"
+			],
+			[
+				"su",
+				"surname"
+			],
+			[
+				"mar",
+				"margin-bottom"
+			],
+			[
+				"fo",
+				"font-family"
+			],
+			[
+				"ba",
+				"background-color"
+			],
+			[
+				"wi",
+				"width"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"pa",
+				"padding"
+			],
+			[
+				"dis",
+				"display"
+			],
+			[
+				"ls",
+				"list-style"
+			],
+			[
+				"bor",
+				"border"
+			],
+			[
+				"no",
+				"none"
+			],
+			[
+				"te",
+				"text-decoration"
+			],
+			[
+				"yea",
+				"years_from_now"
+			],
+			[
+				"pad",
+				"padding-bottom"
+			],
+			[
+				"col",
+				"color"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"border",
+				"border-bottom"
+			],
+			[
+				"tex",
+				"text-decoration"
+			],
+			[
+				"ta",
+				"target	Attr"
+			],
+			[
+				"re",
+				"return"
+			],
+			[
+				"els",
+				"else"
+			],
+			[
+				"rand",
+				"randLoc"
+			],
+			[
+				"guess",
+				"guesses"
+			],
+			[
+				"loca",
+				"location3"
+			],
+			[
+				"gu",
+				"guesses"
+			],
+			[
+				"gues",
+				"guesses"
+			],
+			[
+				"ri",
+				"right"
+			],
+			[
+				"ne",
+				"newFormLi"
+			],
+			[
+				"get",
+				"getValue"
+			],
+			[
+				"skil",
+				"skillsAutocompleter"
+			],
+			[
+				"posi",
+				"positionAutocompleter"
+			],
+			[
+				"fun",
+				"fun	Function"
+			],
+			[
+				"gode",
+				"golden"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 71.0,
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"comm",
+				"Git: Commit"
+			],
+			[
+				"add",
+				"Git: Add Current File"
+			],
+			[
+				"log",
+				"Git: Log All"
+			],
+			[
+				"git fe",
+				"Git: Fetch"
+			],
+			[
+				"git lo",
+				"Git: Log All"
+			],
+			[
+				"git",
+				"Git: Status"
+			],
+			[
+				"pac",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"INS",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 507.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"quit",
+			"ruby",
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/kadamczyk/Code/TwitterLike"
+	],
+	"file_history":
+	[
+		"/Users/kadamczyk/Code/bugtracker/Rakefile",
+		"/Users/kadamczyk/Code/bugtracker/config/secrets.yml",
+		"/Users/kadamczyk/Code/bugtracker/bin/spring",
+		"/Users/kadamczyk/Code/bugtracker/app/views/bugs/show.html.erb",
+		"/Users/kadamczyk/Code/bugtracker/app/views/bugs/edit.html.erb",
+		"/Users/kadamczyk/Code/bugtracker/app/views/bugs/_form.html.erb",
+		"/Users/kadamczyk/Code/bugtracker/app/views/bugs/new.html.erb",
+		"/Users/kadamczyk/Code/bugtracker/app/views/bugs/index.html.erb",
+		"/Users/kadamczyk/Code/bugtracker/app/models/priority.rb",
+		"/Users/kadamczyk/Code/bugtracker/app/controllers/bugs_controller.rb",
+		"/Users/kadamczyk/Code/bugtracker/Gemfile",
+		"/Users/kadamczyk/Code/bugtracker/config/routes.rb",
+		"/Users/kadamczyk/Code/bugtracker/app/assets/stylesheets/application.css.scss",
+		"/Users/kadamczyk/Code/bugtracker/app/assets/stylesheets/bugs.css.scss",
+		"/Users/kadamczyk/Downloads/Ex_Files_ROR4_EssT/Exercise Files/Chapter 17/17_04/simple_cms/app/views/subjects/edit.html.erb",
+		"/Users/kadamczyk/Downloads/Ex_Files_ROR4_EssT/Exercise Files/Chapter 17/17_04/simple_cms/app/views/sections/new.html.erb",
+		"/Users/kadamczyk/Downloads/Ex_Files_ROR4_EssT/Exercise Files/Chapter 17/17_04/simple_cms/app/views/sections/edit.html.erb",
+		"/Users/kadamczyk/Downloads/Ex_Files_ROR4_EssT/Exercise Files/Chapter 17/17_04/simple_cms/app/views/sections/_form.html.erb",
+		"/Users/kadamczyk/Code/bugtracker/app/models/bug.rb",
+		"/Users/kadamczyk/Code/bugtracker/app/views/layouts/application.html.erb",
+		"/Users/kadamczyk/Code/bugtracker/app/helpers/application_helper.rb",
+		"/Users/kadamczyk/Code/bugtracker/app/views/application/_messages.html.erb",
+		"/Users/kadamczyk/Downloads/Ex_Files_ROR4_EssT/Exercise Files/Chapter 17/17_04/simple_cms/app/views/application/_error_messages.html.erb",
+		"/Users/kadamczyk/Downloads/Ex_Files_ROR4_EssT/Exercise Files/Chapter 17/17_04/simple_cms/app/views/layouts/admin.html.erb",
+		"/Users/kadamczyk/Downloads/Ex_Files_ROR4_EssT/Exercise Files/Chapter 17/17_04/simple_cms/app/views/layouts/public.html.erb",
+		"/Users/kadamczyk/Downloads/Ex_Files_ROR4_EssT/Exercise Files/Chapter 17/17_04/simple_cms/app/views/layouts/application.html.erb",
+		"/Users/kadamczyk/Downloads/Ex_Files_ROR4_EssT/Exercise Files/Chapter 17/17_04/simple_cms/app/views/layouts/_navigation.html.erb",
+		"/Users/kadamczyk/Downloads/Ex_Files_ROR4_EssT/Exercise Files/Chapter 17/17_04/simple_cms/app/controllers/pages_controller.rb",
+		"/Users/kadamczyk/Library/Application Support/Sublime Text 3/Packages/User/SCSS.sublime-settings",
+		"/Users/kadamczyk/Code/bugtracker/config/initializers/assets.rb",
+		"/Users/kadamczyk/Library/Application Support/Sublime Text 3/Packages/User/erb.sublime-settings",
+		"/Users/kadamczyk/Code/bugtracker/app/assets/javascripts/application.js",
+		"/Users/kadamczyk/Code/bugtracker/app/assets/stylesheets/application.css",
+		"/Users/kadamczyk/Code/bugtracker/db/seeds.rb",
+		"/Users/kadamczyk/Code/bugtracker/config/initializers/inflections.rb",
+		"/Users/kadamczyk/Code/bugtracker/bin/bundle",
+		"/Users/kadamczyk/Code/bugtracker/config/environments/development.rb",
+		"/Users/kadamczyk/Code/bugtracker/.gitignore",
+		"/Users/kadamczyk/Code/blog/app/views/posts/show.html.erb",
+		"/Users/kadamczyk/Code/blog/app/views/posts/index.html.erb",
+		"/Users/kadamczyk/Code/blog/app/views/posts/edit.html.erb",
+		"/Users/kadamczyk/Code/blog/config/database.yml",
+		"/Users/kadamczyk/Library/Application Support/Sublime Text 3/Packages/User/HTML (Rails).sublime-settings",
+		"/Users/kadamczyk/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/kadamczyk/Code/blog/app/views/posts/index.json.jbuilder",
+		"/Users/kadamczyk/Code/blog/app/views/layouts/application.html.erb",
+		"/Users/kadamczyk/Code/blog/config/routes.rb",
+		"/Users/kadamczyk/Code/Ruby/klasa.rb",
+		"/Users/kadamczyk/Code/Ruby/klasa_pracujaca.rb",
+		"/Users/kadamczyk/Code/Ruby/example.rb",
+		"/Users/kadamczyk/Code/cyfrowyPolsat/LOGO/test.rb",
+		"/Users/kadamczyk/Code/Ruby/style.css",
+		"/Users/kadamczyk/Code/Ruby/2.html",
+		"/Users/kadamczyk/Code/Ruby/3.html",
+		"/Users/kadamczyk/Code/Ruby/1.html",
+		"/Users/kadamczyk/Library/Application Support/Sublime Text 3/Packages/User/Ruby.sublime-settings",
+		"/Users/kadamczyk/Code/cyfrowyPolsat/battleshipjs/index.html",
+		"/Users/kadamczyk/Code/cyfrowyPolsat/battleshipjs/js/battleship.js",
+		"/Users/kadamczyk/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Users/kadamczyk/Code/cyfrowyPolsat/LOGO/logo",
+		"/Users/kadamczyk/Sites/GoldenLine/app/config/deploy.rb",
+		"/Users/kadamczyk/Sites/GoldenLine/src/GoldenLine/UserBundle/Resources/config/routing_settings.xml",
+		"/Users/kadamczyk/Sites/GoldenLine/src/GoldenLine/HrProjectBundle/Resources/config/routing_projects.xml",
+		"/Users/kadamczyk/Sites/GoldenLine/vendor/phpunit/phpunit/Tests/_files/structureWrongNumberOfAttributes.xml",
+		"/Users/kadamczyk/Sites/GoldenLine/vendor/propel/propel1/test/testsuite/generator/builder/util/outerSchema.xml",
+		"/Users/kadamczyk/Sites/GoldenLine/vendor/friendsofsymfony/jsrouting-bundle/FOS/JsRoutingBundle/Resources/config/services.xml",
+		"/Users/kadamczyk/Sites/GoldenLine/vendor/symfony/symfony/src/Symfony/Component/Routing/Tests/Fixtures/null_values.xml",
+		"/Users/kadamczyk/Sites/GoldenLine/src/GoldenLine/HrProjectBundle/Resources/config/routing_projects_legacy.xml",
+		"/Users/kadamczyk/Sites/GoldenLine/vendor/friendsofsymfony/rest-bundle/FOS/RestBundle/Tests/Fixtures/Routes/users_collection.xml",
+		"/Users/kadamczyk/Sites/GoldenLine/vendor/friendsofsymfony/rest-bundle/FOS/RestBundle/Tests/Fixtures/Routes/prefixed_users_collection.xml",
+		"/Users/kadamczyk/Sites/GoldenLine/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/views/Exception/traces.xml.twig",
+		"/Users/kadamczyk/Sites/GoldenLine/vendor/friendsofsymfony/jsrouting-bundle/FOS/JsRoutingBundle/Resources/config/serializer.xml",
+		"/Users/kadamczyk/Sites/GoldenLine/vendor/propel/propel1/test/testsuite/generator/builder/util/testSchema.xml",
+		"/Users/kadamczyk/Sites/GoldenLine/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources/config/test.xml",
+		"/Users/kadamczyk/Sites/GoldenLine/src/GoldenLine/ContactsBundle/Resources/config/services/account_type_handlers.xml",
+		"/Users/kadamczyk/Sites/GoldenLine/vendor/friendsofsymfony/jsrouting-bundle/FOS/JsRoutingBundle/Resources/config/controllers.xml",
+		"/Users/kadamczyk/Sites/GoldenLine/src/GoldenLine/UserBundle/Resources/views/Mailing/aboutSearch.html.twig",
+		"/Users/kadamczyk/Sites/GoldenLine/src/GoldenLine/HrSearchBundle/Resources/views/Product/aboutSearch.html.twig",
+		"/Users/kadamczyk/Sites/GoldenLine/src/GoldenLine/Utilities/RoutingBundle/Tests/RouteOptionsTraitTest.php",
+		"/Users/kadamczyk/Sites/GoldenLine/vendor/friendsofsymfony/rest-bundle/FOS/RestBundle/Controller/Annotations/RouteResource.php",
+		"/Users/kadamczyk/Sites/GoldenLine/vendor/friendsofsymfony/jsrouting-bundle/FOS/JsRoutingBundle/Resources/js/router.test.js",
+		"/Users/kadamczyk/Sites/GoldenLine/vendor/aws/aws-sdk-php/docs/service-route53.rst",
+		"/Users/kadamczyk/Sites/GoldenLine/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Tests/Routing/RouterTest.php",
+		"/Users/kadamczyk/Sites/GoldenLine/vendor/symfony/symfony/src/Symfony/Component/Routing/Tests/Annotation/RouteTest.php",
+		"/Users/kadamczyk/Sites/GoldenLine/vendor/friendsofsymfony/jsrouting-bundle/FOS/JsRoutingBundle/Resources/js/router.js",
+		"/Users/kadamczyk/Sites/GoldenLine/vendor/symfony/symfony/src/Symfony/Component/Routing/Tests/RouterTest.php",
+		"/Users/kadamczyk/Sites/GoldenLine/vendor/symfony/symfony/src/Symfony/Component/Routing/Tests/RouteTest.php",
+		"/Users/kadamczyk/Sites/GoldenLine/vendor/friendsofsymfony/rest-bundle/FOS/RestBundle/Resources/doc/5-automatic-route-generation_single-restful-controller.md",
+		"/Users/kadamczyk/Sites/GoldenLine/vendor/czarnolecki/google-bundle/AntiMattr/GoogleBundle/Tests/testkernel/config/routing_test.yml",
+		"/Users/kadamczyk/Sites/GoldenLine/vendor/symfony/symfony/src/Symfony/Bundle/SecurityBundle/Tests/Functional/LocalizedRoutesAsPathTest.php",
+		"/Users/kadamczyk/Sites/GoldenLine/vendor/friendsofsymfony/jsrouting-bundle/FOS/JsRoutingBundle/Resources/js/router_test.html",
+		"/Users/kadamczyk/Sites/GoldenLine/web/bundles/fosjsrouting/js/router.js",
+		"/Users/kadamczyk/Sites/GoldenLine/vendor/symfony/symfony/src/Symfony/Bundle/SecurityBundle/Tests/Functional/app/StandardFormLogin/localized_routes_with_forward.yml",
+		"/Users/kadamczyk/Sites/GoldenLine/vendor/friendsofsymfony/jsrouting-bundle/FOS/JsRoutingBundle/Tests/Extractor/ExposedRoutesExtractorTest.php",
+		"/Users/kadamczyk/Sites/GoldenLine/src/GoldenLine/CommentsBundle/Resources/config/routing_esi.yml",
+		"/Users/kadamczyk/Sites/GoldenLine/vendor/friendsofsymfony/jsrouting-bundle/FOS/JsRoutingBundle/Extractor/ExposedRoutesExtractorInterface.php",
+		"/Users/kadamczyk/Sites/GoldenLine/vendor/symfony/symfony/src/Symfony/Bundle/SecurityBundle/Tests/Functional/app/StandardFormLogin/localized_routes.yml",
+		"/Users/kadamczyk/Sites/GoldenLine/vendor/friendsofsymfony/jsrouting-bundle/FOS/JsRoutingBundle/Extractor/ExposedRoutesExtractor.php",
+		"/Users/kadamczyk/Sites/GoldenLine/vendor/symfony/symfony/src/Symfony/Bundle/SecurityBundle/Tests/Functional/app/StandardFormLogin/routes_as_path.yml",
+		"/Users/kadamczyk/Sites/GoldenLine/vendor/symfony/symfony/src/Symfony/Bundle/SecurityBundle/Tests/Functional/app/CsrfFormLogin/routes_as_path.yml",
+		"/Users/kadamczyk/Sites/GoldenLine/vendor/friendsofsymfony/jsrouting-bundle/FOS/JsRoutingBundle/Response/RoutesResponse.php",
+		"/Users/kadamczyk/Sites/GoldenLine/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Routing/Router.php",
+		"/Users/kadamczyk/Sites/GoldenLine/vendor/aws/aws-sdk-php/src/Aws/Route53/Exception/Route53Exception.php",
+		"/Users/kadamczyk/Sites/GoldenLine/src/GoldenLine/LegacyBundle/Tests/RouterConfigRouteConverterTest.php",
+		"/Users/kadamczyk/Sites/GoldenLine/vendor/symfony/symfony/src/Symfony/Component/Routing/Annotation/Route.php",
+		"/Users/kadamczyk/Sites/GoldenLine/vendor/symfony/symfony/src/Symfony/Component/Routing/RouteCompiler.php",
+		"/Users/kadamczyk/Sites/GoldenLine/vendor/symfony/symfony/src/Symfony/Component/Routing/RouteCollection.php",
+		"/Users/kadamczyk/Sites/GoldenLine/vendor/friendsofsymfony/rest-bundle/FOS/RestBundle/View/RouteRedirectView.php",
+		"/Users/kadamczyk/Sites/GoldenLine/vendor/aws/aws-sdk-php/src/Aws/Ec2/Enum/RouteOrigin.php",
+		"/Users/kadamczyk/Sites/GoldenLine/vendor/symfony/symfony/src/Symfony/Component/Routing/Router.php",
+		"/Users/kadamczyk/Sites/GoldenLine/vendor/aws/aws-sdk-php/src/Aws/Route53/Route53Client.php",
+		"/Users/kadamczyk/Sites/GoldenLine/src/GoldenLine/LegacyBundle/Tests/RouterConfigLoaderTest.php",
+		"/Users/kadamczyk/Sites/GoldenLine/src/GoldenLine/LegacyBundle/Routing/RouterConfigRouteConverter.php",
+		"/Users/kadamczyk/Sites/GoldenLine/vendor/symfony/symfony/src/Symfony/Component/Routing/Route.php",
+		"/Users/kadamczyk/Sites/GoldenLine/vendor/sensio/framework-extra-bundle/Sensio/Bundle/FrameworkExtraBundle/Configuration/Route.php",
+		"/Users/kadamczyk/Sites/GoldenLine/vendor/friendsofsymfony/rest-bundle/FOS/RestBundle/Controller/Annotations/Route.php",
+		"/Users/kadamczyk/Sites/GoldenLine/src/GoldenLine/LegacyBundle/Routing/RouterConfigLoader.php",
+		"/Users/kadamczyk/Sites/GoldenLine/src/GoldenLine/ApiBundle/Helper/RouteNameHelper.php",
+		"/Users/kadamczyk/Sites/GoldenLine/src/GoldenLine/Utilities/RoutingBundle/Router.php",
+		"/Users/kadamczyk/Sites/GoldenLine/app/config/routing.yml",
+		"/Users/kadamczyk/Sites/GoldenLine/src/GoldenLine/FirmBundle/Resources/config/routing_other.xml",
+		"/Users/kadamczyk/Sites/GoldenLine/src/GoldenLine/HrSearchBundle/Resources/config/routing_statistics.xml",
+		"/Users/kadamczyk/Sites/GoldenLine/README.md",
+		"/Users/kadamczyk/Sites/GoldenLine/web/bundles/layout/less/fonts.less",
+		"/Users/kadamczyk/Sites/GoldenLine/src/GoldenLine/JobsBundle/Service/JobFirmConnector.php",
+		"/Users/kadamczyk/Sites/GoldenLine/src/GoldenLine/JobsBundle/Resources/views/JobOffersLanding/jobAlert.html.twig",
+		"/Users/kadamczyk/Sites/GoldenLine/src/GoldenLine/JobsBundle/Resources/views/Mailing/jobAlert.html.twig",
+		"/Users/kadamczyk/Sites/GoldenLine/web/bundles/jobs/less/JobOffersLanding/jobAlert.less"
+	],
+	"find":
+	{
+		"height": 27.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"",
+			"*.less",
+			"",
+			"*.less",
+			"locationWidget.js",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"Bug",
+			"/linki/url",
+			"Nie działają linki",
+			"element",
+			"root_url",
+			"root_path",
+			"alert",
+			"worning",
+			"brand",
+			"danger",
+			"div",
+			"section",
+			"', ",
+			"section",
+			"times",
+			"name",
+			"company",
+			"surname",
+			"name",
+			"imie",
+			"th",
+			"impact",
+			");",
+			"dla-startupow",
+			"type.less",
+			"ui-tabs-selected",
+			"less/bootstrap/mixins.less",
+			"gridColumnWidth",
+			"@gridColumnWidth",
+			".core",
+			"font-size: 85%",
+			"small",
+			"div.to",
+			"isSyn",
+			"skrzynka",
+			"topWrapper",
+			".topWrapper",
+			"  \n",
+			"newLinkStyle",
+			"        $",
+			"_internal/meta/stylesheets",
+			"routing",
+			"/kadamczyk/",
+			".size",
+			".radius",
+			"size",
+			"kadamczyk",
+			"center",
+			"fullNam",
+			"sendMail",
+			"{%",
+			"set",
+			"mailSubject",
+			".textShadowWhite",
+			".close",
+			"[];\n",
+			"checkIsAutocompleterEmpty",
+			"ityA",
+			"cityAutocompleterElement",
+			"autoco",
+			"lokaizacja",
+			"language",
+			"languages",
+			"Language",
+			"<img src=\"{{ asset('bundles/bazingageocoder/images/geocoder_marker.png') }}\" />",
+			"geocoder_marker.png",
+			"    {{",
+			"applyOnlineAction",
+			"apply",
+			"zobacz",
+			"si",
+			"pros",
+			"umiej",
+			"removeSuggestion",
+			"getV",
+			"skillsAutocompleter",
+			"skillsAutocompleterElement",
+			"addChosenSuggestion",
+			"add",
+			"praca/oferta/umiejetnosc/sugeruj",
+			"oferta/umiejetnosc/sugeruj",
+			"praca/oferta/umiejetnosc/sugeruj",
+			"sugeruj",
+			"toggleExtraPositionHandler",
+			"pro",
+			"goldenline",
+			"email",
+			"mail",
+			"localhost"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"location",
+			"locations",
+			"Location"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 126.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.git":
+	{
+		"height": 100.0
+	},
+	"project": "TwitterLike.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"rou",
+				"config/routes.rb"
+			],
+			[
+				"seed",
+				"db/seeds.rb"
+			],
+			[
+				"jobalertless",
+				"web/bundles/jobs/less/JobOffersLanding/jobAlert.less"
+			],
+			[
+				"jobalert.",
+				"src/GoldenLine/JobsBundle/Resources/views/Mailing/jobAlert.html.twig"
+			],
+			[
+				"jobalert.html",
+				"src/GoldenLine/JobsBundle/Resources/views/JobOffersLanding/jobAlert.html.twig"
+			],
+			[
+				"new.html.twi",
+				"src/GoldenLine/MailBundle/Resources/views/layout.new.html.twig"
+			],
+			[
+				"debughandler",
+				"vendor/symfony/symfony/src/Symfony/Bridge/Monolog/Handler/DebugHandler.php"
+			],
+			[
+				"fonts.l",
+				"web/bundles/layout/less/fonts.less"
+			],
+			[
+				"postmenjobsuggestionscommand",
+				"src/GoldenLine/JobsBundle/Command/PostmenJobSuggestionsCommand.php"
+			],
+			[
+				"varia",
+				"src/GoldenLine/LayoutBundle/Resources/public/less/variables.less"
+			],
+			[
+				"para",
+				"app/config/parameters.yml"
+			],
+			[
+				"insta",
+				"vendor/composer/installed.json"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"",
+				"~/Code/bugtracker/app/models/Coocbook.sublime-project"
+			],
+			[
+				"ter",
+				"~/Code/RubyTests/TestWebpage/TestRails.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 226.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
