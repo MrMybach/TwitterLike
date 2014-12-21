@@ -1,9 +1,7 @@
 class PostsController < ApplicationController
 
-  before_action :authenticate_user!
-
   def index
-    @posts = current_user.posts.all
+    @posts = current_user.posts.page(params[:page]).per(5)
   end
 
   def new
@@ -14,7 +12,7 @@ class PostsController < ApplicationController
     @post = current_user.posts.new(post_params)
     if @post.save
       flash[:success] = "Post was successfuly created!"
-      redirect_to @post
+      redirect_to posts_path
     else
       flash[:alert] = "Something went wrong. Please try again!"
       render :new
