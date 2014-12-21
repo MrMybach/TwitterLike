@@ -3,7 +3,7 @@ class PostsController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @posts = Post.all
+    @posts = current_user.posts.all
   end
 
   def new
@@ -22,19 +22,29 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = Post.find(params[:id])
+    @post = current_user.posts.find(params[:id])
   end
 
   def edit
-
+    @post = current_user.posts.find(params[:id])
   end
 
   def update
-
+    @post = current_user.posts.find(params[:id])
+    if @post.update_attributes(post_params)
+      flash[:success] = "Edit successfull!"
+      redirect_to @post
+    else
+      flash[:alert] = "Something went wrong. Please try again!"
+      render :edit
+    end
   end
 
   def destroy
-
+    @post = current_user.posts.find(params[:id])
+    @post.destroy
+    redirect_to root_path
+    flash[:success] = "Deleted successfully!"
   end
 
   private
@@ -42,4 +52,5 @@ class PostsController < ApplicationController
   def post_params
     params.require(:post).permit(:title, :text)
   end
+
 end

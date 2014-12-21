@@ -1,12 +1,11 @@
 <div class="row">
 	<h1>Posts Index</h1>
-	<%= link_to "New tweet", new_post_path %>
 </div>
 
 <div class="row">
 	<% @posts.each do |post| %>
 		<div class="post col-md-4">
-			<h2><%= post.title %></h2>
+			<h2><%= link_to "#{post.title}", post_path(post) %></h2>
 			<small> <%= post.created_at.strftime("%d %b %Y") %></small>
 			<p><%= post.text %></p>
 		</div>
