@@ -1,0 +1,57 @@
+US - Dodawanie tweetów
+Jako user mogę dodawać tweety
+
+- wchodze na stronę główną
+- loguje się
+- dodaję tweet
+
+====================================
+
+US - przeglądanie swoich tweetów
+Jako user mam możliwość przeglądania swoich postów.
+
+- po zalogowainu się, na swojej stronie widzę wszustkie swoje tweety
+- po kliknięciu w tweet przechodzę na stronę tego tweeta i widzę odpowiedzi na mojego tweeta
+
+====================================
+US - Usuwanie tweetów
+Jako user mogę usunąć każdego swojego tweeta
+
+- po zalogowaniu, na swojej stronie głównej przy każdym z tweetów widzę przycisk usuń
+- mogę usuwać swoje tweet pojedyńczo
+
+====================================
+US - Przeglądanie stron innych userów
+Jako zalogowany user, ze swojej strony głównej mogę przejść na listę wszystkich userów
+
+- na swojej stronie widzę przycisk All users
+- po kliknięciu w przycisk przechodzę na listę wszystkich userów
+- przy każdym z userów widzę ile tweetów ma dany user
+- mogę kliknąć w nazwę usera i przejść na jego stronę z jego postami
+
+====================================
+US - Mogę dodawać userów do znajomych
+Jako user mogę dodawać sobie znajomych
+
+- na stronie wszystkich userów, przy każdym z userów widzę przycisk dodaj do znajomych
+- po kliknięciu w przycisk, user dodaje się do moich znajomych znajomych
+
+====================================
+US - Mogę retweetować
+Jako user mogę retweetować tweety swoich znajomych
+
+- jako zalogowany user, posiadający inndego usera w znajomych, widzę przy jego tweetach przycisk retweet
+- po kliknięciu w przycisk piszę tweeta.
+
+====================================
+====================================
+RELACJE
+
+Dodajemy znajomych:
+user has_many_and_belongs_to user through friendship
+====================================
+
+Issues:
+- po wylogowaniu wyskakuje błąd o braku id "sign_out"
+
+- dodawanie znajomych nie działa, nadal w parametrach jest rządanie typu GET, z parametrem. Powody: usunięcie turbolinków, zmiana bazy na pgsql

@@ -2,9 +2,6 @@ class PostsController < ApplicationController
 
   def index
     @posts = current_user.posts.page(params[:page]).per(5)
-  end
-
-  def new
     @post = current_user.posts.new
   end
 
@@ -21,21 +18,6 @@ class PostsController < ApplicationController
 
   def show
     @post = current_user.posts.find(params[:id])
-  end
-
-  def edit
-    @post = current_user.posts.find(params[:id])
-  end
-
-  def update
-    @post = current_user.posts.find(params[:id])
-    if @post.update_attributes(post_params)
-      flash[:success] = "Edit successfull!"
-      redirect_to @post
-    else
-      flash[:alert] = "Something went wrong. Please try again!"
-      render :edit
-    end
   end
 
   def destroy

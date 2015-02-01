@@ -1,23 +1,23 @@
 <div class="row">
-	<div class="col-md-6 col-md-offset-1">
-		<h1>Posts Index</h1>
+	<div class="col-md-10 col-md-offset-1">
+		<h1>Hi <span class="text-info"><%= current_user.email %></span></h1>
 		<hr>
 	</div>
 </div>
+<%= render 'new_tweet' %>
 <div class="row">
 	<div class="col-md-6 col-md-offset-1">
 		<% @posts.each do |post| %>
 			<div class="post">
-				<h2><%= post.title %></h2>
 				<small> <%= post.created_at.strftime("%d %b %Y") %></small>
-				<p><%= post.text %></p>	
+				<p><%= post.text %></p>
 				<div class="btn-group btn-group-xs" role="group">
-					<%= link_to "Edit", edit_post_path(post), class: "btn btn-success" %>
-					<%= link_to "Delete", post_path(post), method: :delete, class: "btn btn-warning" %>
+					<%= link_to 'Delete', post_path(post), method: :delete, class: "btn btn-warning" %>
 				</div>
 			</div>
 			<hr>
 		<% end %>
 		<%= paginate @posts %>
 	</div>
+	<%= render 'user_friends' %>
 </div>
