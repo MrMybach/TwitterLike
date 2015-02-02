@@ -1,0 +1,7 @@
+.row
+  %h1= @post.title
+  %p= @post.text
+.row
+  .btn-group.btn-group-xs{:role => "group"}
+    = link_to "Edit", edit_post_path, class: "btn btn-default"
+    = link_to "Delete", post_path(@post), method: :delete, class: "btn btn-default"

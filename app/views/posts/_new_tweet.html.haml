@@ -1,0 +1,6 @@
+.row
+  .col-md-10.col-md-offset-1
+    = form_for @post, url: { action: "create" }, html: { class: "form form-inline" } do |f|
+      %section.form-group= f.text_area :text, placeholder: "Tweet here!", size: "50x1", class: "form-control"
+      = f.submit 'Tweet', class: "btn btn-primary"
+    %hr/

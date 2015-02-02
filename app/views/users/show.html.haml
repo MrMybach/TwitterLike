@@ -1,0 +1,16 @@
+.row
+  .col-md-8.col-md-offset-1
+    %h2
+      You are waching
+      %span.text-info= @user.email
+      Tweets
+    %hr/
+.row
+  .col-md-6.col-md-offset-1
+    - @user.posts.each do |post|
+      .post
+        %small
+          = post.created_at.strftime("%d %b %Y")
+        %p= post.text
+        %section= link_to "Retweet", retweet_post_path(post), method: :post
+    = paginate @user_posts

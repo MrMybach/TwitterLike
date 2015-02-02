@@ -1,0 +1,22 @@
+.row
+  .col-md-10.col-md-offset-1
+    %h1
+      Hi
+      %span.text-info= current_user.email
+    %hr/
+= render 'new_tweet'
+.row
+  .col-md-6.col-md-offset-1
+    - @posts.each do |post|
+      .post.if{:class => "<haml_silent> post.parrent_id.present? </haml_silent><haml_block>post-retweered</haml_block>"}
+        %small
+          = post.created_at.strftime("%d %b %Y")
+        %p
+          = post.text
+          - if post.parrent_id.present?
+            %small.text-muted
+              \...retweeted from #{link_to post.parrent.user.email, user_path(post.parrent.user)}
+        .btn-group.btn-group-xs{:role => "group"}
+          = link_to 'Delete', post_path(post), method: :delete, class: "btn btn-warning"
+    = paginate @posts
+  = render 'user_friends'

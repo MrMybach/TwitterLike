@@ -1,0 +1,8 @@
+.col-md-3.col-md-offset-1
+  - unless current_user.friends.empty?
+    %h3 Your friends
+    .list-group
+      - current_user.friends.each do |friend|
+        = link_to user_path(friend.id), class: "list-group-item" do
+          = friend.email
+          %span.badge= friend.posts.count
