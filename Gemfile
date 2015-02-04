@@ -31,6 +31,7 @@ gem 'autoprefixer-rails'
 gem 'devise', '~> 3.4.1'
 gem 'kaminari'
 gem 'haml', '~> 4.0.6'
+gem 'draper', '~> 1.4.0'
 
 group :development do
   gem 'pry-rails'
