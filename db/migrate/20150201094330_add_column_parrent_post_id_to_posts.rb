@@ -1,6 +1,6 @@
 class AddColumnParrentPostIdToPosts < ActiveRecord::Migration
   def up
-    add_column :posts, :parrent_id, :integer, null: false, default: ""
+    add_column :posts, :parrent_id, :integer
     remove_column :posts, :title
   end
 

@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 20150201094330) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "user_id"
-    t.integer  "parrent_id",             default: 0, null: false
+    t.integer  "parrent_id"
   end
 
   create_table "users", force: true do |t|
