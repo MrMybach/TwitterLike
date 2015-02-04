@@ -55,3 +55,12 @@ Issues:
 - po wylogowaniu wyskakuje błąd o braku id "sign_out"
 
 - dodawanie znajomych nie działa, nadal w parametrach jest rządanie typu GET, z parametrem. Powody: usunięcie turbolinków, zmiana bazy na pgsql
+
+
+
+
+ReTweet
+
+- dodanie kolumny "parrent_post" do tabeli "posts", które będzie przechowywać ID posta na którego odpowiadamy
+
+- jeśli pole id "parrent_post" bedzie puste, to znaczy że jest to post najwyższego poziomu.
