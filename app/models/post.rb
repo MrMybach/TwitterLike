@@ -1,5 +1,5 @@
 class Post < ActiveRecord::Base
   belongs_to :user
-  # validates :title, presence: true - Ususnąć podczas następnej migracji
-  validates :text, presence: true, length: {maximum: 140}
+  validates :text, presence: true, length: {minimum: 2, maximum: 140}
+  belongs_to :parrent, class_name: 'Post'
 end
