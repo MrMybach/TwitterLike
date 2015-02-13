@@ -3,9 +3,14 @@
     %h1 Users list
 .row
   .col-md-6.col-md-offset-1
-    %ul.list-group
+    %ul.list-group.list-all-users
       - @users.each do |user|
         %li.list-group-item
-          = link_to "#{user.email}", user_path(user)
+          = image_tag user.avatar.url(:thumb), size: '33', class: 'img-circle'
+          = link_to user_path(user), class: 'user-link' do
+            - if user.first_name && user.last_name
+              = user.full_name
+            - else
+              = user.email
           %span.badge= user.posts.count
           = link_to "Add to friend", friendships_path(id: user.id), method: :post, class: 'btn btn-default btn-xs'

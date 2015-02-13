@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
 
   def index
-    @users = User.all - [current_user]
+    @users = User.all - [current_user] # removing logged in user form the list of all users
   end
 
   def show

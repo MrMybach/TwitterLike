@@ -11,11 +11,10 @@ class PostsController < ApplicationController
       respond_to do |format|
         format.json { render json: json_builder(@post.decorate), status: 201 }
       end
-      # flash[:success] = "Post was successfuly created!"
-      # redirect_to posts_path
     else
-      flash[:alert] = "Something went wrong. Please try again!"
-      render :index
+      respond_to do |format|
+        format.json { render json: @post.errors.to_json.titleize, status: 422 }
+      end
     end
   end
 
@@ -23,16 +22,11 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     @retweet = Post.new(parrent_id: @post.id, text: @post.text, user_id: current_user.id)
     if @retweet.save
-      flash[:success] = "Retweeted!"
       redirect_to posts_path
     else
       flash[:alert] = "Something went wrong. Please try again!"
       render :index
     end
-  end
-
-  def show
-    @post = current_user.posts.find(params[:id])
   end
 
   def destroy
@@ -45,7 +39,7 @@ class PostsController < ApplicationController
   private
 
   def json_builder(post)
-    { post: @post.text, published_at: @post.published_at }
+    { id: post.id, post: post.text, published_at: post.published_at }
   end
 
   def fetch_tweets

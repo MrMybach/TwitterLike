@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
   devise_for :users
+
   resources :posts, path: 'tweets' do
     member do
       post :retweet
     end
   end
+
   resources :users
 
   resources :friendships, only: [:create]

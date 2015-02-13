@@ -1,0 +1,11 @@
+.row
+  .col-md-4.col-md-offset-4
+    %h3 Resend unlock instructions
+    = form_for(resource, as: resource_name, url: unlock_path(resource_name), html: { method: :post, class: 'form' }) do |f|
+      = devise_error_messages!
+      %section.form-group= f.email_field :email, autofocus: true, placeholder: 'Enter your email', class: 'form-control'
+      .row
+        .col-md-8.col-md-offset-2
+          = f.submit "Resend unlock instructions", class: 'btn btn-primary btn-block'
+          %br/
+    = render "devise/shared/links"

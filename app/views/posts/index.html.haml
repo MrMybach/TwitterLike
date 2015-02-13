@@ -1,14 +1,16 @@
 .row
   .col-md-10.col-md-offset-1
     %h1
+      = image_tag current_user.avatar.url(:thumb), class: 'img-circle'
       Hi
-      %span.text-info= current_user.email
+      %span.text-info= current_user.first_name
     %hr/
 = render 'new_tweet'
 .row
   .col-md-6.col-md-offset-1.tweets-js
+    .alert.alert-warning.alert-js{style: 'display:none', role: 'alert'}
     - @tweets.each do |post|
-      .post{:class => (" post-retweeted" if post.parrent_id.present?)}
+      .post{ :class => (" post-retweeted" if post.parrent_id.present?) }
         %small
           = post.published_at
         %p
@@ -16,7 +18,8 @@
           - if post.parrent_id.present?
             %small.text-muted
               \...retweeted from #{link_to post.parrent.user.email, user_path(post.parrent.user)}
-        .btn-group.btn-group-xs{:role => "group"}
-          = link_to 'Delete', post_path(post), method: :delete, class: "btn btn-warning"
+        -# .btn-group.btn-group-xs{:role => "group"}
+        = link_to post_path(post), method: :delete, class: 'btn btn-default', data: { toggle: 'tooltip', placement: 'right', title: 'Delete tweet' } do
+          %span.glyphicon.glyphicon-trash
     = paginate @tweets
   = render 'user_friends'

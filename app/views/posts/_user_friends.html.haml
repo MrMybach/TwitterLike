@@ -4,5 +4,8 @@
     .list-group
       - current_user.friends.each do |friend|
         = link_to user_path(friend.id), class: "list-group-item" do
-          = friend.email
+          - if friend.first_name && friend.last_name
+            = friend.full_name
+          - else
+            = friend.email
           %span.badge= friend.posts.count

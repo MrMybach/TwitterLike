@@ -1,8 +1,13 @@
 .row
   .col-md-8.col-md-offset-1
     %h2
+      = image_tag @user.avatar.url(:thumb), class: 'img-circle'
       You are waching
-      %span.text-info= @user.email
+      %span.text-info
+        - if @user.first_name && @user.last_name
+          = @user.full_name
+        - else
+          = @user.email
       Tweets
     %hr/
 .row
