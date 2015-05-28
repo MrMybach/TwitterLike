@@ -1,7 +1,8 @@
 .row
   .col-md-10.col-md-offset-1
-    = form_for @post, url: { action: "create" }, remote: true, html: { class: "form form-inline", id: "new-tweet-js" } do |f|
-      %section.form-group= f.text_area :text, placeholder: "Tweet here!", size: "65x1", class: "form-control"
-      = f.submit 'Tweet', class: "btn btn-primary"
-      %span.label.label-info.label-js
+    = form_for @post, url: { action: "create" }, html: { class: "form form-inline", id: "new-tweet-js" } do |f|
+      %section.input-group
+        = f.text_field :text, placeholder: "Tweet here!", size: "60x1", class: "form-control"
+        .input-group-addon.label-js{ title: 'Characters left', data: { toggle: 'tooltip', placement: 'top' }} 140
+      = f.submit 'Tweet', class: "btn btn-primary", data: { disable_with: 'Saving...' }
     %hr/

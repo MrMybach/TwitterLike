@@ -1,0 +1,7 @@
+.post
+  %small
+    = @post.published_at
+  %p
+    = @post.text
+  = link_to post_path(@post), method: :delete, class: 'btn btn-default btn-delete-js' do
+    %span.glyphicon.glyphicon-trash
