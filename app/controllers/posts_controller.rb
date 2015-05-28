@@ -6,10 +6,11 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = current_user.posts.new(post_params)
+    @post = current_user.posts.new(post_params).decorate
     if @post.save
       respond_to do |format|
-        format.json { render json: json_builder(@post.decorate), status: 201 }
+        # format.json { render json: json_builder(@post.decorate), status: 201 }
+        format.html { render partial: 'single_tweet.html.haml', status: 201 }
       end
     else
       respond_to do |format|
@@ -32,8 +33,9 @@ class PostsController < ApplicationController
   def destroy
     @post = current_user.posts.find(params[:id])
     @post.destroy
-    render :index
-    flash[:success] = "Deleted successfully!"
+    respond_to do |format|
+      format.json { head :no_content }
+    end
   end
 
   private
