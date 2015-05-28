@@ -1,35 +1,96 @@
-$(document).ready(function(){
-    $('#new-tweet-js').on('ajax:success', function(xhr, data, status) {
-        var tweet = '<div class="post">' +
-                    '<small>' + data.published_at + '</small>' +
-                    '<p>' + data.post + '</p>' +
-                    '<div class="btn-group btn-group-xs" role="group">' +
-                    '<a class="btn btn-warning" data-method="delete" href="/tweets/' + data.id + '" rel="nofollow">Delete</a>' +
-                    '</div>' +
-                    '</div>';
+(function() {
+    'use strict';
 
-        $(tweet).hide().prependTo('.tweets-js').fadeIn(500);
-        $('.form-group').removeClass('has-error');
-        $('#new-tweet-js textarea').val('');
-    }).on('ajax:error', function(xhr, error, status) {
+    var $flashAlert = null,
+        $form = null,
+        $currentTweet = null,
+        $deleteButton = null,
+        $submitButton = null,
+        $tweetInput = null,
+        $tweetsList = null;
 
-        $('.form-group').addClass('has-error').on('keyup', function(){
-            $(this).removeClass('has-error');
+    function newTweetHandler(event) {
+        var url = $form.prop('action'),
+            data = $form.serialize();
+
+        event.preventDefault();
+
+        $form.find('#post_text').on('focus', $('.alert-js').fadeOut() );
+
+        $.ajax({
+            url: url,
+            data: data,
+            dataType: 'html',
+            method: 'POST',
+            statusCode: {
+                201: function(data) {
+                    $tweetsList.prepend(data);
+                    $form.find('#post_text').val('');
+                },
+                422: function(error) {
+                    var responseMsg = $.parseJSON(error.responseText);
+
+                    $tweetInput.parent().addClass('has-error');
+
+                    $flashAlert.text(responseMsg.Text[0] + '. ' + responseMsg.Text[1]).fadeIn();
+                }
+            }
         });
+    }
 
-        $('.alert-js').text(error.responseJSON.Text[0]).fadeIn().delay(3000).fadeOut();
-    });
+    function removeTweet(event) {
+        var url = $(this).prop('href');
 
-    $('#new-tweet-js textarea').on('keyup', function() {
-        var textArea = $(this).val().length;
-        var maxChar = 140;
-        var charLeft = maxChar - textArea;
+        $currentTweet = $(this).parents('.post');
+
+        event.preventDefault();
+
+        $.ajax({
+            url: url,
+            method: 'DELETE',
+            statusCode: {
+                204: function() {
+                    $currentTweet.fadeOut();
+                    $currentTweet.remove();
+                },
+                404: function(error) {
+                    console.log(error);
+                }
+            }
+        });
+    }
+
+    function countCharacters() {
+        var textArea = $(this).val().length,
+            maxChar = 140,
+            charLeft = maxChar - textArea;
+
+        $('.input-group [data-toggle="tooltip"]').trigger('mouseenter');
+        $tweetInput.parent().removeClass('has-error');
+        $flashAlert.hide('fast').text('');
         $('.label-js').text(charLeft);
-        $('input[type="submit"]').on('click', function (){
+        $('input[type="submit"]').on('click', function () {
             $('.label-js').text(maxChar);
         });
-    });
+    }
 
-    $('.alert-dismissible').delay(2000).fadeOut();
-    $('[data-toggle="tooltip"]').tooltip('.btn-group-xs');
-});
+    $(function() {
+        $flashAlert = $('.alert-js');
+        $form = $('#new-tweet-js');
+        $tweetsList = $('.tweets-js');
+        $tweetInput = $form.find('#post_text');
+        $submitButton = $form.find('input[type="submit"]');
+        $deleteButton = $('.btn-delete-js');
+
+        $tweetInput
+            .on('keyup', countCharacters)
+            .on('blur',
+                function() {
+                    $('.input-group [data-toggle="tooltip"]').trigger('mouseleave');
+                });
+
+        $('.input-group [data-toggle="tooltip"]').tooltip({container: 'body'});
+        $submitButton.on('click', newTweetHandler);
+        $deleteButton.on('click', removeTweet);
+    });
+})();
