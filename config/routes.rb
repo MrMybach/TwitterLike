@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
   devise_for :users
 
-  resources :posts, path: 'tweets' do
+  concern :paginatable do
+    get '(page/:page)', :action => :index, :on => :collection, :as => ''
+  end
+
+  resources :posts, :concerns => :paginatable, path: 'tweets' do
     member do
       post :retweet
     end
