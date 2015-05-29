@@ -4,7 +4,6 @@
     var $flashAlert = null,
         $form = null,
         $currentTweet = null,
-        $deleteButton = null,
         $submitButton = null,
         $tweetInput = null,
         $tweetsList = null;
@@ -15,7 +14,7 @@
 
         event.preventDefault();
 
-        $form.find('#post_text').on('focus', $('.alert-js').fadeOut() );
+        $form.find('#post_text').on('focus', $('.alert-js').fadeOut());
 
         $.ajax({
             url: url,
@@ -39,22 +38,28 @@
     }
 
     function removeTweet(event) {
-        var url = $(this).prop('href');
-
-        $currentTweet = $(this).parents('.post');
+        var url = $(this).data('url'),
+            method = $(this).data('method');
 
         event.preventDefault();
 
+        $currentTweet = $(this).parents('.post');
+
         $.ajax({
             url: url,
-            method: 'DELETE',
+            method: method,
+            beforeSend: function(xhr) {
+                xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'));
+            },
             statusCode: {
                 204: function() {
-                    $currentTweet.fadeOut();
-                    $currentTweet.remove();
+                    $currentTweet.fadeOut(400);
+
+                    setTimeout(function() {
+                        $currentTweet.remove();
+                    },400);
                 },
                 404: function(error) {
-                    console.log(error);
                 }
             }
         });
@@ -80,7 +85,17 @@
         $tweetsList = $('.tweets-js');
         $tweetInput = $form.find('#post_text');
         $submitButton = $form.find('input[type="submit"]');
-        $deleteButton = $('.btn-delete-js');
+
+        $('#tweets').infinitescroll({
+            navSelector: 'nav .pagination',
+            nextSelector: 'nav .pagination a[rel=next]',
+            contentSelector: '#tweets',
+            itemSelector: '#tweets > div.post',
+            loading: {
+                msgText: '<small class="text-muted">Loading more Tweets</small>',
+                finishedMsg: '<small class="text-muted">No more Tweets</small>'
+            }
+        });
 
         $tweetInput
             .on('keyup', countCharacters)
@@ -91,6 +106,6 @@
 
         $('.input-group [data-toggle="tooltip"]').tooltip({container: 'body'});
         $submitButton.on('click', newTweetHandler);
-        $deleteButton.on('click', removeTweet);
+        $('#tweets').on('click', '.btn-delete-js', removeTweet);
     });
 })();

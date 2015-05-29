@@ -9,8 +9,8 @@ class PostsController < ApplicationController
     @post = current_user.posts.new(post_params).decorate
     if @post.save
       respond_to do |format|
-        # format.json { render json: json_builder(@post.decorate), status: 201 }
-        format.html { render partial: 'single_tweet.html.haml', status: 201 }
+        format.json { render json: json_builder(@post.decorate), status: 201 }
+        format.html { render partial: 'new_post.html.haml', status: 201 }
       end
     else
       respond_to do |format|

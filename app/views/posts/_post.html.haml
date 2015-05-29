@@ -1,0 +1,10 @@
+.post{ :class => (" post-retweeted" unless post.parrent_id.nil?) }
+  %small
+    = post.published_at
+  %p
+    = post.text
+    - if post.parrent_id.present?
+      %small.text-muted
+        \...retweeted from #{ link_to post.parrent.user.email, user_path(post.parrent.user) }
+  = link_to '', method: :delete, data: { :url => post_url(post) }, class: 'btn btn-default btn-delete-js' do
+    %span.glyphicon.glyphicon-trash

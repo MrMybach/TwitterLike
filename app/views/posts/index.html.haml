@@ -5,23 +5,13 @@
       Hi
       %span.text-info= current_user.first_name
     %hr/
-= render 'new_tweet'
+= render 'form_new_tweet'
 .row
   .col-md-6.col-md-offset-1
     .alert.alert-warning.alert-js{style: 'display:none', role: 'alert'}
   .row
-    .col-md-6.col-md-offset-1.tweets-js
-      - @tweets.each do |post|
-        .post{ :class => (" post-retweeted" if post.parrent_id.present?) }
-          %small
-            = post.published_at
-          %p
-            = post.text
-            - if post.parrent_id.present?
-              %small.text-muted
-                -# \...retweeted from #{ link_to post.parrent.user.email, user_path(post.parrent.user) }
-          -# .btn-group.btn-group-xs{:role => "group"}
-          = link_to post_path(post), method: :delete, class: 'btn btn-default btn-delete-js' do
-            %span.glyphicon.glyphicon-trash
+    .col-md-6.col-md-offset-1
+      .tweets-js{ id: 'tweets' }
+        = render @tweets
       = paginate @tweets
     = render 'user_friends'
