@@ -12,7 +12,6 @@ body {
   width: 30px;
   height: 30px;
   background-color: #5cb85c;
-
   margin: 30px auto;
   -webkit-animation: rotateplane 1.2s infinite ease-in-out;
   animation: rotateplane 1.2s infinite ease-in-out;
@@ -54,10 +53,6 @@ body {
   }
 }
 
-.post {
-  border-bottom: 1px solid $gray-lighter;
-  padding: 20px 0;
-}
 .post-retweeted {
   padding-left: 3%;
 }
