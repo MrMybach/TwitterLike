@@ -30,7 +30,6 @@
                     var responseMsg = $.parseJSON(error.responseText);
 
                     $tweetInput.parent().addClass('has-error');
-
                     $flashAlert.text(responseMsg.Text[0] + '. ' + responseMsg.Text[1]).fadeIn();
                 }
             }
@@ -57,7 +56,7 @@
 
                     setTimeout(function() {
                         $currentTweet.remove();
-                    },400);
+                    }, 400);
                 },
                 404: function(error) {
                 }
