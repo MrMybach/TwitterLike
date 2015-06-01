@@ -13,9 +13,10 @@
 .row
   .col-md-6.col-md-offset-1
     - @user.posts.each do |post|
-      .post
+      .post.well.well-sm
         %small
           = post.created_at.strftime("%d %b %Y")
         %p= post.text
-        %section= link_to "Retweet", retweet_post_path(post), method: :post
+        %section
+        = link_to "Retweet", retweet_post_path(post), method: :post, class: 'retweet-js'
     = paginate @user_posts

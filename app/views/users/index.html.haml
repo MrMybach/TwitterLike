@@ -12,5 +12,6 @@
               = user.full_name
             - else
               = user.email
-          %span.badge= user.posts.count
-          = link_to "Add to friend", friendships_path(id: user.id), method: :post, class: 'btn btn-default btn-xs'
+          %span.badge= pluralize(user.posts.count, 'tweet', 'tweets')
+          - unless current_user.friends.include?(user)
+            = link_to "Add to friend", '', data: { :url => friendships_path, :method => 'POST', :friend_id => user.id }, class: 'btn btn-default btn-xs add-to-friend-js'

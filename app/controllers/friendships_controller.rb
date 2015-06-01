@@ -2,13 +2,16 @@ class FriendshipsController < ApplicationController
   def create
     @friendship = Friendship.new
     @friendship.user = current_user
-    @friendship.friend = User.find(params[:id])
+    @friendship.friend = User.find(params[:friend_id])
+
     if @friendship.save
-      flash[:success] = "User added as a friend!"
-      redirect_to root_path
+      respond_to do |format|
+        format.json { head :created }
+      end
     else
-      flash[:success] = "I have bad feeling about this"
-      render :new
+      respond_to do |format|
+        format.json { render json: @friendship.errors.to_json.titleize, status: 422 }
+      end
     end
   end
 end
