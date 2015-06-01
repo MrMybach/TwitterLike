@@ -11,7 +11,7 @@
     .alert.alert-warning.alert-js{style: 'display:none', role: 'alert'}
   .row
     .col-md-6.col-md-offset-1
-      .tweets-js{ id: 'tweets' }
+      .tweets-js{ id: 'tweets', data: { last_page: @tweets.total_pages } }
         = render @tweets
-      = paginate @tweets
+        = paginate @tweets
     = render 'user_friends'

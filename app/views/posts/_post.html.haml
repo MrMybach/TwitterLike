@@ -1,4 +1,4 @@
-.post{ :class => (" post-retweeted" unless post.parrent_id.nil?) }
+.post.well.well-sm{ :class => (" post-retweeted" unless post.parrent_id.nil?) }
   %small
     = post.published_at
   %p
