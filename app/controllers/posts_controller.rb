@@ -23,7 +23,9 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     @retweet = Post.new(parrent_id: @post.id, text: @post.text, user_id: current_user.id)
     if @retweet.save
-      redirect_to posts_path
+      respond_to do |format|
+        format.json { head :created }
+      end
     else
       flash[:alert] = "Something went wrong. Please try again!"
       render :index
@@ -45,7 +47,7 @@ class PostsController < ApplicationController
   end
 
   def fetch_tweets
-    @tweets = current_user.posts.page(params[:page]).per(5)
+    @tweets = current_user.posts.page(params[:page])
     @tweets = PaginatingDecorator.decorate(@tweets)
   end
 
